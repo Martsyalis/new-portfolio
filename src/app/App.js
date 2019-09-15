@@ -9,7 +9,7 @@ function App() {
     <React.Fragment>
       <CssBaseline />
       <Router>
-        <div  >
+        <div style={{ display: "flex" }}>
           <NavDrawer />
           <Routes />
         </div>
