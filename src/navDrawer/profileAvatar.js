@@ -32,12 +32,12 @@ function ProfileAvatar() {
 }
 const useStyles = makeStyles({
   card: {
-    maxWidth: 240
+    maxWidth: 340
   },
   media: {
-    height: 200,
-    width: 200,
-    margin: 20
+    height: 250,
+    width: 250,
+    margin: 45
   },
   typography: {
     textAlign: "center"
