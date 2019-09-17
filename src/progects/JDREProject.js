@@ -30,17 +30,16 @@ function JDREProject() {
             <Typography varian="body1" className={classes.summery}>
               JDRE is a first subscription based real estate company in the
               world(maybe). We were tasked with developing a Mobile app,
-              Administrative website and Server which would take care of RMLS
-              Database and displaying the info on an interactive map,
-              Subscriptions, Notifications, Signing of Legal Documents, Chat and
-              Many more features. There were many interesting arhitectural
-              choices Read more about them below!
+              Administrative website and Servers. These needed to process RMLS
+              Database, display the house info on an interactive map,
+              manage various client Subscriptions, Notifications, Legal Documents, Chat and
+              many more features.
             </Typography>
             <ListExpansionPanel
               classes={classes}
               title="What Worked"
               p1="Redux was a great choice for this app. The app had alot of functionality dependant on a common large set of data and multiple layers of information availible to users based on their role. Use of Reducers and Dictioneries helped us keep the loading times relatively short, and protect the store from bugs in individual components. This was especially crusial since the project didn't have any tests to speak of, but more on that in 'What did not work' section"
-              p2="We opted for using service worker for notifications, Which worked great and were very easy to set up. Another advantage of this was that we were able to reuse the same logic for administrative website, so The Real Estate Agents were able to get dynamic notifications about new client or new chat message on their phone without having to build and publish a native app"
+              p2="We opted for using service worker for notifications, Which worked great and were very easy to set up. Another advantage of this was that we were able to re-use the same logic for administrative website, so The Real Estate Agents were able to get dynamic notifications about new client or new chat message on their phone without having to build and publish a native app"
             />
             <ListExpansionPanel
               classes={classes}
@@ -151,6 +150,7 @@ const useStyles = makeStyles(theme => ({
     textAlign: "center",
     margin: 30
   },
+  summery: {textAlign: 'justify '},
   expansionPanelParent: { width: 660 },
   expansionPanel: { marginTop: 10 },
   expansionSummery: {},
