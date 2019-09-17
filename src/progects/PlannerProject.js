@@ -152,7 +152,7 @@ const useStyles = makeStyles(theme => ({
   carousel: { width: 330 },
   imgParent: { background: "white" },
   projectImg: {
-    height: 700,
+    height: 600,
     width: 330,
     objectFit: "cover"
   },

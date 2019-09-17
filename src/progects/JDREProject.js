@@ -25,37 +25,27 @@ function JDREProject() {
         >
           <div className={classes.expansionPanelParent}>
             <Typography variant="h2" component="h2" className={classes.header}>
-              Money Planner
+              Jimmy Dorsey Real Estate
             </Typography>
             <Typography varian="body1" className={classes.summery}>
-              Mockup for the financial planner progressive web app. The idea
-              behind the app was a place to collect all info on one's spending
-              and analyze it. The original Project involved ML through
-              TensorFlow but there was nowhere near enough data points to
-              produce any new analysis. I still found the app to be very helpful
-              in keeping track of my daily expenses, and seeing overall trends
-              and predictions for my spending. I use it daily.
+              JDRE is a first subscription based real estate company in the
+              world(maybe). We were tasked with developing a Mobile app,
+              Administrative website and Server which would take care of RMLS
+              Database and displaying the info on an interactive map,
+              Subscriptions, Notifications, Signing of Legal Documents, Chat and
+              Many more features. There were many interesting arhitectural
+              choices Read more about them below!
             </Typography>
             <ListExpansionPanel
               classes={classes}
               title="What Worked"
-              p1="I found the expense tiles to be very easy and
-                    straightforward to use, of course, the available categories
-                    were designed around me, but I could never make myself keep
-                    a record of anything at all until this app."
-              p2="I think the Cards turned out to be a good design and
-                    engineering choice, they were pretty easy to refactor and
-                    add features too as they covered more and more components."
+              p1="Redux was a great choice for this app. The app had alot of functionality dependant on a common large set of data and multiple layers of information availible to users based on their role. Use of Reducers and Dictioneries helped us keep the loading times relatively short, and protect the store from bugs in individual components. This was especially crusial since the project didn't have any tests to speak of, but more on that in 'What did not work' section"
+              p2="We opted for using service worker for notifications, Which worked great and were very easy to set up. Another advantage of this was that we were able to reuse the same logic for administrative website, so The Real Estate Agents were able to get dynamic notifications about new client or new chat message on their phone without having to build and publish a native app"
             />
             <ListExpansionPanel
               classes={classes}
               title="What Didn't Work"
-              p1="In Monthly or Total expenses Charts, Rent takes up too much
-              space. I am not sure how to handle it at this time, but
-              potential solutions would be to move Rent to its own category.
-              On the other hand, Thematicly and logically Rent belong in
-              Monthly Expenses, and perhaps the squished graph just tells me
-              I should spend less on Rent..."
+              p1="Given a very ambitious initial time-frame and ever changing product goals and features we elected not to spend time developing a proper testing suite. This made initial development rapid and agile. But once the project evolved into a 2 complicated, feature rich front-ends and 2 complicated and computationaly demaning back-ends, adding one ferature as often as not meant breaking another. Things got so bad that by the end of the development we frequently had to rely on our clients to tell us when something in one of the apps broke. The complex and massive Database and constreins of App store meant that it would frequently take us a better part of a week to release a fix for product breaking bug"
               p2="PWA aspect of the app certainly makes it much easier to use on
               a daily bases and this app simply wouldn't be usable without
               it, but My cashing technique is inefficient and probably
@@ -153,7 +143,7 @@ const useStyles = makeStyles(theme => ({
   carousel: { width: 330 },
   imgParent: { background: "white" },
   projectImg: {
-    height: 700,
+    height: 600,
     width: 330,
     objectFit: "cover"
   },
