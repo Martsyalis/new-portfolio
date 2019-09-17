@@ -18,40 +18,6 @@ function JDREProject() {
   return (
     <React.Fragment>
       <Paper className={classes.paper}>
-        <Grow in={true}>
-          <div>
-            <Carousel
-              className={classes.carousel}
-              showArrows={false}
-              showThumbs={false}
-              showStatus={false}
-              infiniteLoop={true}
-              autoPlay={true}
-            >
-              <div className={classes.imgParent}>
-                <img
-                  src="https://firebasestorage.googleapis.com/v0/b/portfolio-51296.appspot.com/o/iphone-add.png?alt=media&token=a7dec390-1bec-46fe-9e56-947562e541c3"
-                  alt="Planner app"
-                  className={classes.projectImg}
-                />
-              </div>
-              <div className={classes.imgParent}>
-                <img
-                  src="https://firebasestorage.googleapis.com/v0/b/portfolio-51296.appspot.com/o/iphone-budget.png?alt=media&token=df3f4797-5ba9-4308-ab7c-d475d7a42a28"
-                  alt="Planner app"
-                  className={classes.projectImg}
-                />
-              </div>
-              <div className={classes.imgParent}>
-                <img
-                  src="https://firebasestorage.googleapis.com/v0/b/portfolio-51296.appspot.com/o/iphone-charts.png?alt=media&token=bfe9433d-1fa1-4ea5-92ab-adea5e8398ea"
-                  alt="Planner app"
-                  className={classes.projectImg}
-                />
-              </div>
-            </Carousel>
-          </div>
-        </Grow>
         <Grow
           in={true}
           style={{ transformOrigin: "0 0 0" }}
@@ -118,6 +84,41 @@ function JDREProject() {
               practice Data Visualisation which was one of the original
               goals of this project"
             />
+          </div>
+        </Grow>
+        <Grow in={true}>
+          <div>
+            <Carousel
+              className={classes.carousel}
+              showArrows={false}
+              showThumbs={false}
+              showStatus={false}
+              infiniteLoop={true}
+              autoPlay={true}
+              interval={5000}
+            >
+              <div className={classes.imgParent}>
+                <img
+                  src="https://firebasestorage.googleapis.com/v0/b/portfolio-51296.appspot.com/o/iphone-splash.png?alt=media&token=ecd95732-07ca-4706-94dd-34dc8edf84a3"
+                  alt="Splash screen of JDRE App"
+                  className={classes.projectImg}
+                />
+              </div>
+              <div className={classes.imgParent}>
+                <img
+                  src="https://firebasestorage.googleapis.com/v0/b/portfolio-51296.appspot.com/o/iphone-map.png?alt=media&token=4abd70ec-956f-4f54-a943-aa720a1986ec"
+                  alt="Map screen of JDRE App"
+                  className={classes.projectImg}
+                />
+              </div>
+              <div className={classes.imgParent}>
+                <img
+                  src="https://firebasestorage.googleapis.com/v0/b/portfolio-51296.appspot.com/o/phone-account.png?alt=media&token=9d063883-4e7c-481a-9471-ce00fa0fbb76"
+                  alt="Account screen of JDRE App"
+                  className={classes.projectImg}
+                />
+              </div>
+            </Carousel>
           </div>
         </Grow>
       </Paper>
