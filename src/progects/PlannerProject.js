@@ -25,6 +25,7 @@ function PlannerProject() {
           <div>
             <Carousel
               className={classes.carousel}
+              showArrows={false}
               showThumbs={false}
               showStatus={false}
               infiniteLoop={true}
@@ -63,7 +64,7 @@ function PlannerProject() {
             <Typography variant="h2" component="h2" className={classes.header}>
               Money Planner
             </Typography>
-            <Typography varian="body1">
+            <Typography varian="body1" className={classes.summery}>
               Mockup for the financial planner progressive web app. The idea
               behind the app was a place to collect all info on one's spending
               and analyze it. The original Project involved ML through
