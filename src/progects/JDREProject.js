@@ -13,7 +13,7 @@ import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 
-function PlannerProject() {
+function JDREProject() {
   const classes = useStyles();
   return (
     <React.Fragment>
@@ -166,4 +166,4 @@ const useStyles = makeStyles(theme => ({
   expansionText: { marginBottom: 20 }
 }));
 
-export default PlannerProject;
+export default JDREProject;
