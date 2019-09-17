@@ -9,7 +9,12 @@ import {
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
-import iphoneExpenses from "../assets/iphone-add.png";
+import iphoneAdd from "../assets/iphone-add.png";
+import iphoneBudget from "../assets/iphone-budget.png";
+import iphoneCharts from "../assets/iphone-charts.png";
+
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from "react-responsive-carousel";
 
 function PlannerProject() {
   const classes = useStyles();
@@ -17,20 +22,55 @@ function PlannerProject() {
     <React.Fragment>
       <Paper className={classes.paper}>
         <Grow in={true}>
-          <img
-            src={iphoneExpenses}
-            alt="Planner app"
-            className={classes.projectImg}
-          />
+          <div>
+            <Carousel
+              className={classes.carousel}
+              showThumbs={false}
+              showStatus={false}
+              infiniteLoop={true}
+              autoPlay={true}
+            >
+              <div className={classes.imgParent}>
+                <img
+                  src={iphoneAdd}
+                  alt="Planner app"
+                  className={classes.projectImg}
+                />
+              </div>
+              <div className={classes.imgParent}>
+                <img
+                  src={iphoneBudget}
+                  alt="Planner app"
+                  className={classes.projectImg}
+                />
+              </div>
+              <div className={classes.imgParent}>
+                <img
+                  src={iphoneCharts}
+                  alt="Planner app"
+                  className={classes.projectImg}
+                />
+              </div>
+            </Carousel>
+          </div>
         </Grow>
         <Grow
           in={true}
           style={{ transformOrigin: "0 0 0" }}
-          {...(true ? { timeout: 1000 } : {})}
+          {...{ timeout: 1000 }}
         >
           <div className={classes.expansionPanelParent}>
             <Typography variant="h2" component="h2" className={classes.header}>
               Money Planner
+            </Typography>
+            <Typography varian="body1">
+              Mockup for the financial planner progressive web app. The idea
+              behind the app was a place to collect all info on one's spending
+              and analyze it. The original Project involved ML through
+              TensorFlow but there was nowhere near enough data points to
+              produce any new analysis. I still found the app to be very helpful
+              in keeping track of my daily expenses, and seeing overall trends
+              and predictions for my spending. I use it daily.
             </Typography>
             <ListExpansionPanel
               classes={classes}
@@ -111,6 +151,8 @@ function ListExpansionPanel({ classes, title, p1, p2 }) {
 
 const useStyles = makeStyles(theme => ({
   paper: { display: "flex", flexWrap: "wrap", justifyContent: "space-evenly" },
+  carousel: { width: 330 },
+  imgParent: { background: "white" },
   projectImg: {
     height: 700,
     width: 330,
@@ -121,6 +163,7 @@ const useStyles = makeStyles(theme => ({
     margin: 30
   },
   expansionPanelParent: { width: 660 },
+  expansionPanel: { marginTop: 10 },
   expansionSummery: {},
   expansionText: { marginBottom: 20 }
 }));
