@@ -3,7 +3,8 @@ import {
   Paper,
   ExpansionPanel,
   ExpansionPanelSummary,
-  Typography
+  Typography,
+  Grow
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import VisibilitySensor from "react-visibility-sensor";
@@ -16,47 +17,57 @@ function PlannerProject() {
   return (
     <React.Fragment>
       <Paper className={classes.paper}>
-        <img
-          src={iphoneExpenses}
-          alt="Planner app"
-          className={classes.projectImg}
-        />
-        <div className={classes.expansionPanelParent}>
-          <Typography variant="h2" component="h2" className={classes.header}>
-            Money Planner
-          </Typography>
-          <ExpansionPanel className={classes.expansionPanel}>
-            <ExpansionPanelSummary
-              expandIcon={<ExpandMoreIcon />}
-              aria-controls="panel1a-content"
-              id="panel1a-header"
-              className={classes.expansionSummery}
-            >
-              <Typography>What Worked</Typography>
-            </ExpansionPanelSummary>
-          </ExpansionPanel>
-          <ExpansionPanel className={classes.expansionPanel}>
-            <ExpansionPanelSummary
-              expandIcon={<ExpandMoreIcon />}
-              aria-controls="panel1a-content"
-              id="panel1a-header"
-              className={classes.expansionSummery}
-            >
-              <Typography>What Didn't Work</Typography>
-            </ExpansionPanelSummary>
-          </ExpansionPanel>
-          <ExpansionPanel className={classes.expansionPanel}>
-            <ExpansionPanelSummary
-              expandIcon={<ExpandMoreIcon />}
-              aria-controls="panel1a-content"
-              id="panel1a-header"
-              className={classes.expansionSummery}
-            >
-              <Typography>What Still Needs To Be Done</Typography>
-            </ExpansionPanelSummary>
-          </ExpansionPanel>
-        </div>
+        <Grow in={true}>
+          <img
+            src={iphoneExpenses}
+            alt="Planner app"
+            className={classes.projectImg}
+          />
+        </Grow>
+
+        <Grow
+          in={true}
+          style={{ transformOrigin: "0 0 0" }}
+          {...(true ? { timeout: 1000 } : {})}
+        >
+          <div className={classes.expansionPanelParent}>
+            <Typography variant="h2" component="h2" className={classes.header}>
+              Money Planner
+            </Typography>
+            <ExpansionPanel className={classes.expansionPanel}>
+              <ExpansionPanelSummary
+                expandIcon={<ExpandMoreIcon />}
+                aria-controls="panel1a-content"
+                id="panel1a-header"
+                className={classes.expansionSummery}
+              >
+                <Typography>What Worked</Typography>
+              </ExpansionPanelSummary>
+            </ExpansionPanel>
+            <ExpansionPanel className={classes.expansionPanel}>
+              <ExpansionPanelSummary
+                expandIcon={<ExpandMoreIcon />}
+                aria-controls="panel1a-content"
+                id="panel1a-header"
+                className={classes.expansionSummery}
+              >
+                <Typography>What Didn't Work</Typography>
+              </ExpansionPanelSummary>
+            </ExpansionPanel>
+            <ExpansionPanel className={classes.expansionPanel}>
+              <ExpansionPanelSummary
+                expandIcon={<ExpandMoreIcon />}
+                aria-controls="panel1a-content"
+                id="panel1a-header"
+                className={classes.expansionSummery}
+              >
+                <Typography>What Still Needs To Be Done</Typography>
+              </ExpansionPanelSummary>
+            </ExpansionPanel>
+          </div>
+        </Grow>
       </Paper>
+
       {/* <img src={plannerBudget} alt="Planner app" /> */}
     </React.Fragment>
   );
