@@ -8,20 +8,36 @@ function HomePage() {
 
   return (
     <React.Fragment>
-      <JDREProject />
-      <PlannerProject />
+      <JDREProject classes={classes} />
+      <PlannerProject classes={classes} />
     </React.Fragment>
   );
 }
 
 const useStyles = makeStyles(theme => ({
-  projectImg: {
-    width: 300
+  paper: {
+    display: "flex",
+    flexWrap: "wrap",
+    justifyContent: "space-evenly",
+    height: "90vh",
+    marginTop: "5vh"
   },
-
-  expansionSummery: {
-    width: 700
-  }
+  carousel: { width: 330 },
+  imgParent: { background: "white" },
+  projectImg: {
+    height: 600,
+    width: 330,
+    objectFit: "cover"
+  },
+  header: {
+    textAlign: "center",
+    margin: 30
+  },
+  summery: { textAlign: "justify " },
+  expansionPanelParent: { width: 660 },
+  expansionPanel: { marginTop: 10 },
+  expansionSummery: {},
+  expansionText: { marginBottom: 20 }
 }));
 
 export default HomePage;
