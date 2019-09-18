@@ -8,7 +8,6 @@ function PlannerProject({ classes, isInView }) {
       <Slide
         direction="right"
         in={isInView}
-        mountOnEnter
         style={{ transformOrigin: "0 0 0" }}
         {...{ timeout: 1000 }}
       >

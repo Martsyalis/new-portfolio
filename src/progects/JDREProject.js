@@ -65,7 +65,6 @@ function JDREProject({ classes, isInView }) {
       <Slide
         direction="left"
         in={isInView}
-        mountOnEnter
         style={{ transformOrigin: "0 0 0" }}
         {...{ timeout: 1000 }}
       >

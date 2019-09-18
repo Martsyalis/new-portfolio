@@ -11,10 +11,18 @@ function HomePage() {
 
   return (
     <React.Fragment>
-      <VisibilitySensor onChange={setJDREInView} active={!isJDREInView} partialVisibility={true}>
+      <VisibilitySensor
+        onChange={setJDREInView}
+        active={!isJDREInView}
+        partialVisibility={true}
+      >
         <JDREProject classes={classes} isInView={isJDREInView} />
       </VisibilitySensor>
-      <VisibilitySensor onChange={setPlannerInView} active={!isPlannerInView} partialVisibility={true}>
+      <VisibilitySensor
+        onChange={setPlannerInView}
+        active={!isPlannerInView}
+        partialVisibility={true}
+      >
         <PlannerProject classes={classes} isInView={isPlannerInView} />
       </VisibilitySensor>
     </React.Fragment>
@@ -27,7 +35,8 @@ const useStyles = makeStyles(theme => ({
     flexWrap: "wrap",
     justifyContent: "space-evenly",
     height: "90vh",
-    marginTop: "5vh"
+    marginTop: "5vh",
+    overflow: "hidden"
   },
   carousel: { width: 330 },
   imgParent: { background: "white" },
