@@ -1,11 +1,11 @@
 import React from "react";
-import { Paper, Typography, Zoom, Slide } from "@material-ui/core";
+import { Paper, Typography, Slide } from "@material-ui/core";
 import { ProjectCarousel, ListExpansionPanel } from "./commonProjectComponents";
 function JDREProject({ classes, isInView }) {
-
   return (
     <Paper className={classes.paper}>
-      <Zoom
+      <Slide
+        direction="right"
         in={isInView}
         style={{ transformOrigin: "0 0 0" }}
         {...{ timeout: 1000 }}
@@ -61,7 +61,7 @@ function JDREProject({ classes, isInView }) {
               goals of this project"
           />
         </div>
-      </Zoom>
+      </Slide>
       <Slide
         direction="left"
         in={isInView}

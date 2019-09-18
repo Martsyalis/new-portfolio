@@ -1,5 +1,5 @@
 import React from "react";
-import { Paper, Typography, Zoom, Slide } from "@material-ui/core";
+import { Paper, Typography, Slide } from "@material-ui/core";
 import { ProjectCarousel, ListExpansionPanel } from "./commonProjectComponents";
 
 function PlannerProject({ classes, isInView }) {
@@ -15,8 +15,9 @@ function PlannerProject({ classes, isInView }) {
           <ProjectCarousel interval={3000} classes={classes} imgArr={imgArr} />
         </div>
       </Slide>
-      <Zoom
+      <Slide
         in={isInView}
+        direction="left"
         style={{ transformOrigin: "0 0 0" }}
         {...{ timeout: 1000 }}
       >
@@ -82,7 +83,7 @@ function PlannerProject({ classes, isInView }) {
               goals of this project"
           />
         </div>
-      </Zoom>
+      </Slide>
     </Paper>
   );
 }
