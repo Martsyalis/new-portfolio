@@ -1,12 +1,12 @@
 import React from "react";
-import { Paper, Typography, Grow } from "@material-ui/core";
+import { Paper, Typography, Zoom, Slide } from "@material-ui/core";
 import { ProjectCarousel, ListExpansionPanel } from "./commonProjectComponents";
+function JDREProject({ classes, isInView }) {
 
-function JDREProject({ classes }) {
   return (
     <Paper className={classes.paper}>
-      <Grow
-        in={true}
+      <Zoom
+        in={isInView}
         style={{ transformOrigin: "0 0 0" }}
         {...{ timeout: 1000 }}
       >
@@ -61,12 +61,18 @@ function JDREProject({ classes }) {
               goals of this project"
           />
         </div>
-      </Grow>
-      <Grow in={true}>
+      </Zoom>
+      <Slide
+        direction="left"
+        in={isInView}
+        mountOnEnter
+        style={{ transformOrigin: "0 0 0" }}
+        {...{ timeout: 1000 }}
+      >
         <div>
           <ProjectCarousel interval={5000} classes={classes} imgArr={imgArr} />
         </div>
-      </Grow>
+      </Slide>
     </Paper>
   );
 }

@@ -1,21 +1,23 @@
 import React from "react";
-import {
-  Paper,
-  Typography,
-  Grow,
-} from "@material-ui/core";
+import { Paper, Typography, Zoom, Slide } from "@material-ui/core";
 import { ProjectCarousel, ListExpansionPanel } from "./commonProjectComponents";
 
-function PlannerProject({ classes }) {
+function PlannerProject({ classes, isInView }) {
   return (
     <Paper className={classes.paper}>
-      <Grow in={true}>
+      <Slide
+        direction="right"
+        in={isInView}
+        mountOnEnter
+        style={{ transformOrigin: "0 0 0" }}
+        {...{ timeout: 1000 }}
+      >
         <div>
           <ProjectCarousel interval={3000} classes={classes} imgArr={imgArr} />
         </div>
-      </Grow>
-      <Grow
-        in={true}
+      </Slide>
+      <Zoom
+        in={isInView}
         style={{ transformOrigin: "0 0 0" }}
         {...{ timeout: 1000 }}
       >
@@ -81,7 +83,7 @@ function PlannerProject({ classes }) {
               goals of this project"
           />
         </div>
-      </Grow>
+      </Zoom>
     </Paper>
   );
 }

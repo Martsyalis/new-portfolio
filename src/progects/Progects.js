@@ -1,15 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import PlannerProject from "./PlannerProject";
 import JDREProject from "./JDREProject";
+import VisibilitySensor from "react-visibility-sensor";
 
 function HomePage() {
   const classes = useStyles();
+  const [isJDREInView, setJDREInView] = useState(false);
+  const [isPlannerInView, setPlannerInView] = useState(false);
 
   return (
     <React.Fragment>
-      <JDREProject classes={classes} />
-      <PlannerProject classes={classes} />
+      <VisibilitySensor onChange={setJDREInView} active={!isJDREInView} partialVisibility={true}>
+        <JDREProject classes={classes} isInView={isJDREInView} />
+      </VisibilitySensor>
+      <VisibilitySensor onChange={setPlannerInView} active={!isPlannerInView} partialVisibility={true}>
+        <PlannerProject classes={classes} isInView={isPlannerInView} />
+      </VisibilitySensor>
     </React.Fragment>
   );
 }
