@@ -51,7 +51,7 @@ const useStyles = makeStyles(theme => ({
     margin: 30
   },
   summery: { textAlign: "justify " },
-  expansionPanelParent: { width: 660 },
+  expansionPanelParent: { width: 660, marginTop: 20, marginBottom: 20 },
   expansionPanel: { marginTop: 10 },
   expansionSummery: {},
   expansionText: { marginBottom: 20 }

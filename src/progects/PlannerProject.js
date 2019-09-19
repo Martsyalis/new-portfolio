@@ -3,7 +3,6 @@ import { Paper, Typography, Slide } from "@material-ui/core";
 import { ProjectCarousel, ListExpansionPanel } from "./commonProjectComponents";
 
 function PlannerProject({ classes, isInView }) {
-
   return (
     <Paper className={classes.paper}>
       <Slide
@@ -82,6 +81,12 @@ function PlannerProject({ classes, isInView }) {
               come up with more data to show in Charts, if only to
               practice Data Visualisation which was one of the original
               goals of this project"
+          />
+          <ListExpansionPanel
+            classes={classes}
+            title="Technology Stack"
+            p1="Front End: JS, React, Bulma, PWA"
+            p2="Back End: Serverless arhitecture with Firebase Auth and Firestore"
           />
         </div>
       </Slide>
