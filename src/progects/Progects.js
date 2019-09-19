@@ -22,6 +22,7 @@ function HomePage() {
         onChange={setPlannerInView}
         active={!isPlannerInView}
         partialVisibility={true}
+        minTopValue={300}
       >
         <PlannerProject classes={classes} isInView={isPlannerInView} />
       </VisibilitySensor>
@@ -34,9 +35,9 @@ const useStyles = makeStyles(theme => ({
     display: "flex",
     flexWrap: "wrap",
     justifyContent: "space-evenly",
-    height: "90vh",
+    minHeight: "90vh",
     marginTop: "5vh",
-    overflow: "hidden"
+    overflowX: "hidden"
   },
   carousel: { width: 330 },
   imgParent: { background: "white" },
