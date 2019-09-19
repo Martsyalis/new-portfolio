@@ -69,7 +69,7 @@ function JDREProject({ classes, isInView }) {
         {...{ timeout: 1000 }}
       >
         <div>
-          <ProjectCarousel interval={5000} classes={classes} imgArr={imgArr} />
+          <ProjectCarousel interval={3000} classes={classes} imgArr={imgArr} />
         </div>
       </Slide>
     </Paper>

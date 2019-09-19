@@ -34,6 +34,7 @@ function ListExpansionPanel({ classes, title, p1, p2 }) {
 function ProjectCarousel({ classes, imgArr, interval }) {
   return (
     <Carousel
+      emulateTouch
       className={classes.carousel}
       showArrows={false}
       showThumbs={false}

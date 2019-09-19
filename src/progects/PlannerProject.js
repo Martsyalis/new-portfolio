@@ -3,6 +3,7 @@ import { Paper, Typography, Slide } from "@material-ui/core";
 import { ProjectCarousel, ListExpansionPanel } from "./commonProjectComponents";
 
 function PlannerProject({ classes, isInView }) {
+
   return (
     <Paper className={classes.paper}>
       <Slide
@@ -12,7 +13,7 @@ function PlannerProject({ classes, isInView }) {
         {...{ timeout: 1000 }}
       >
         <div>
-          <ProjectCarousel interval={3000} classes={classes} imgArr={imgArr} />
+          <ProjectCarousel interval={5000} classes={classes} imgArr={imgArr} />
         </div>
       </Slide>
       <Slide
