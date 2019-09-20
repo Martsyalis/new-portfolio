@@ -26,24 +26,19 @@ function PlannerProject({ classes, isInView }) {
             Money Planner
           </Typography>
           <Typography varian="body1" className={classes.summery}>
-            Mockup for the financial planner progressive web app. The idea
-            behind the app was a place to collect all info on one's spending and
-            analyze it. The original Project involved ML through TensorFlow but
-            there was nowhere near enough data points to produce any new
-            analysis. I still found the app to be very helpful in keeping track
-            of my daily expenses, and seeing overall trends and predictions for
-            my spending. I use it daily.
+            Mockup for the financial planner PWA. The main idea behind the app
+            was the lack of centralized place for all your financial expenses. I
+            wanted to create an app that would be extreamly easy to use, while
+            still providing some financial insights. I found the app to be very
+            helpful in keeping track of my daily and monthly expenses, and
+            seeing overall trends and predictions for my spending. I still use
+            it daily.
           </Typography>
           <ListExpansionPanel
             classes={classes}
             title="What Worked"
-            p1="I found the expense tiles to be very easy and
-                    straightforward to use, of course, the available categories
-                    were designed around me, but I could never make myself keep
-                    a record of anything at all until this app."
-            p2="I think the Cards turned out to be a good design and
-                    engineering choice, they were pretty easy to refactor and
-                    add features too as they covered more and more components."
+            p1=" If user is going to use this app after every new expense, it must be really eaasy and quick to use it. I think Add Expense page achives that goal rather well. THe expense tiles make it quick to pick a category for users expense. Once the user picks the tile, the enire screen becomes one numberic input line with a native NuPad. As a result user needs only 3 clicks to enter a new expense"
+            p2="I think the Cards turned out to be a good design and engineering choice, they were pretty easy to refactor and add features too as they covered more and more components."
           />
           <ListExpansionPanel
             classes={classes}
