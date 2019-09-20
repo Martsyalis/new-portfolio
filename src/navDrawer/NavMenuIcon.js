@@ -20,6 +20,8 @@ function NavMenuIcon({ setDrawerOpen }) {
   );
 }
 
-const useStyles = makeStyles(theme => ({}));
+const useStyles = makeStyles(theme => ({
+  menuButton: { position: "fixed" }
+}));
 
 export default NavMenuIcon;
