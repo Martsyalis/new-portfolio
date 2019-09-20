@@ -1,20 +1,22 @@
 import React, { useState } from "react";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import { BrowserRouter as Router } from "react-router-dom";
+import { Paper } from "@material-ui/core";
 import Routes from "./Routes";
 import NavDrawer from "../navDrawer/NavDrawer";
-import BannerBar from "./BannerBar";
+import NavMenuIcon from "../navDrawer/NavMenuIcon";
+
 function App() {
   const [isDrawerOpen, setDrawerOpen] = useState(false);
   return (
-    <React.Fragment>
+    <Paper>
       <CssBaseline />
       <Router>
-        <BannerBar setDrawerOpen={setDrawerOpen} />
+        <NavMenuIcon setDrawerOpen={setDrawerOpen} />
         <NavDrawer isDrawerOpen={isDrawerOpen} setDrawerOpen={setDrawerOpen} />
         <Routes />
       </Router>
-    </React.Fragment>
+    </Paper>
   );
 }
 
