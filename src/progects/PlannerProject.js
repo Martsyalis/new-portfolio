@@ -43,13 +43,8 @@ function PlannerProject({ classes, isInView }) {
           <ListExpansionPanel
             classes={classes}
             title="What Didn't Work"
-            p1="In Monthly or Total expenses Charts, Rent takes up too much
-              space. I am not sure how to handle it at this time, but
-              potential solutions would be to move Rent to its own category.
-              On the other hand, Thematicly and logically Rent belong in
-              Monthly Expenses, and perhaps the squished graph just tells me
-              I should spend less on Rent..."
-            p2="PWA aspect of the app certainly makes it much easier to use on
+            p1="Rent takes too much space in Charts. One potential solution would be to move it to its own category. But thematicly and logically rent belong in monthly expenses. And refactoring would mean changing existing user Data. This once again reinforced just how crusial it is to get data schemas and overall structure right, because once the app."
+            p2="PWA is crusial for this web app. It makes it much easier to use on
               a daily bases and this app simply wouldn't be usable without
               it, but My cashing technique is inefficient and probably
               buggy. The only diagnostic tool that I have for PWA, which is
