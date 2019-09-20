@@ -1,5 +1,5 @@
 import React from "react";
-import { Paper, Typography, Slide } from "@material-ui/core";
+import { Typography, Slide } from "@material-ui/core";
 import { ProjectCarousel, ListExpansionPanel } from "./commonProjectComponents";
 function JDREProject({ classes, isInView }) {
   return (

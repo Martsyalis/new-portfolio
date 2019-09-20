@@ -1,5 +1,5 @@
 import React from "react";
-import { Paper, Typography, Slide } from "@material-ui/core";
+import { Typography, Slide } from "@material-ui/core";
 import { ProjectCarousel, ListExpansionPanel } from "./commonProjectComponents";
 
 function PlannerProject({ classes, isInView }) {
@@ -26,36 +26,28 @@ function PlannerProject({ classes, isInView }) {
             Money Planner
           </Typography>
           <Typography varian="body1" className={classes.summery}>
-            Mockup for the financial planner PWA. The main idea behind the app
-            was the lack of centralized place for all your financial expenses. I
-            wanted to create an app that would be extreamly easy to use, while
-            still providing some financial insights. I found the app to be very
-            helpful in keeping track of my daily and monthly expenses, and
-            seeing overall trends and predictions for my spending. I still use
-            it daily.
+            Mockup for the financial planner PWA. As I got more bank accounts
+            and contractor positions, my financies became much harder to track.
+            To solve this I wanted to create a centralized place for all my
+            financial expenses. I set out to create an app that would be
+            extreamly easy to use, while still providing financial insights and
+            self accountability. I found the app to be very helpful in keeping
+            track of my daily and monthly expenses, and seeing overall trends
+            and predictions for my spending. Over the first month, it cut my
+            expenses by third. It turns out that $4 coffees, and 3 dollar snacks
+            add up very quickly.
           </Typography>
           <ListExpansionPanel
             classes={classes}
             title="What Worked"
-            p1=" If user is going to use this app after every new expense, it must be really eaasy and quick to use it. I think Add Expense page achives that goal rather well. THe expense tiles make it quick to pick a category for users expense. Once the user picks the tile, the enire screen becomes one numberic input line with a native NuPad. As a result user needs only 3 clicks to enter a new expense"
-            p2="I think the Cards turned out to be a good design and engineering choice, they were pretty easy to refactor and add features too as they covered more and more components."
+            p1="If user is going to use this app to track every purchase, it must be really easy and quick to use. I think Add Expense page achives that goal rather well. THe expense tiles make it quick to pick a category for users expense. Once the user picks the tile, the enire screen becomes one numeric input line with a native NuPad. As a result user needs only 3 clicks to enter a new expense"
+            p2="PWA adds inteligent cashing, offline capabilities, and an option to download and use the app as native on mobile device. This makes it much more practical for everyday, 'on the go' use. When using Android OS, which allows PWA to behave like native app from the app store, This adds a lot of utility and ease to User Expirience"
           />
           <ListExpansionPanel
             classes={classes}
             title="What Didn't Work"
             p1="Rent takes too much space in Charts. One potential solution would be to move it to its own category. But thematicly and logically rent belong in monthly expenses. And refactoring would mean changing existing user Data. This once again reinforced just how crusial it is to get data schemas and overall structure right, because once the app."
-            p2="PWA is crusial for this web app. It makes it much easier to use on
-              a daily bases and this app simply wouldn't be usable without
-              it, but My cashing technique is inefficient and probably
-              buggy. The only diagnostic tool that I have for PWA, which is
-              google's Lighthouse, shows near 100% ratings. But personally,
-              Everytime the app is updated and the new version has to be
-              loaded, the cashing takes a good 6-7 seconds which feels
-              excruciatingly slow. Half the time I close down the app
-              entirely and re-open it out of impatience. The solution might
-              be to simply let user know whats happening by displaying
-              'Updating' Messege. But Im a little worried about messing with
-              Service Worker any more then I already have."
+            p2="As mentioned before PWA is a great tool for android mobile apps. However I don't have enough expirience with the technology to make sure the cashing follows best practices and logic. Moreover, downloading the app on the device from the webpage is still not supported on iOS, so the app produces significantly different user expirience depending on OS."
           />
           <ListExpansionPanel
             classes={classes}
@@ -76,7 +68,7 @@ function PlannerProject({ classes, isInView }) {
             classes={classes}
             title="Technology Stack"
             p1="Front End: JS, React, Bulma, PWA"
-            p2="Back End: Serverless arhitecture with Firebase Auth and Firestore"
+            p2="Back End: Serverless with Firebase Auth and Firestore"
           />
         </div>
       </Slide>
