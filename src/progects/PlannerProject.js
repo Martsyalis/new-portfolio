@@ -34,8 +34,8 @@ function PlannerProject({ classes, isInView }) {
             self accountability. I found the app to be very helpful in keeping
             track of my daily and monthly expenses, and seeing overall trends
             and predictions for my spending. Over the first month, it cut my
-            expenses by third. It turns out that $4 coffees, and 3 dollar snacks
-            add up very quickly.
+            expenses by third. Turns out that $4 coffees, and 3 dollar snacks
+            add up very quickly
           </Typography>
           <ListExpansionPanel
             classes={classes}
@@ -46,23 +46,14 @@ function PlannerProject({ classes, isInView }) {
           <ListExpansionPanel
             classes={classes}
             title="What Didn't Work"
-            p1="Rent takes too much space in Charts. One potential solution would be to move it to its own category. But thematicly and logically rent belong in monthly expenses. And refactoring would mean changing existing user Data. This once again reinforced just how crusial it is to get data schemas and overall structure right, because once the app."
-            p2="As mentioned before PWA is a great tool for android mobile apps. However I don't have enough expirience with the technology to make sure the cashing follows best practices and logic. Moreover, downloading the app on the device from the webpage is still not supported on iOS, so the app produces significantly different user expirience depending on OS."
+            p1="Rent takes too much space in Charts. One potential solution would be to move it to its own category. But thematicly and logically rent belong in monthly expenses. And refactoring would mean changing existing user Data. This once again reinforced just how crusial it is to get data schemas and overall structure right, because once the app"
+            p2="As mentioned before PWA is a great tool for android mobile apps. However I don't have enough expirience with the technology to make sure the cashing follows best practices and logic. Moreover, downloading the app on the device from the webpage is still not supported on iOS, so the app produces significantly different user expirience depending on OS"
           />
           <ListExpansionPanel
             classes={classes}
-            title="What needs to be added"
-            p1="In future versions, the tiles need to be customizable to an
-              individual user. the difficulty with that right now is that
-              I can't think of the categories that others might need, And
-              I can't offer user to name their own because icons are so
-              crucial to the 'effortlessness' of adding a new expense"
-            p2="More Data is needed for this, but where the Charts could
-              really shine is in a multi-month analysis. Until then I have
-              no long term trends to analyze. Still, it would be nice to
-              come up with more data to show in Charts, if only to
-              practice Data Visualisation which was one of the original
-              goals of this project"
+            title="What Could Be Added"
+            p1="Webpack build seems to be fairly performant, but there is no comprehensive bundle splitting. Ideally, common dependencies and Bulma Sass files could be bundled separately. Perhaps login/sign up page and its dependencies could live in a separate bundle to quickly load up for the first time users"
+            p2="Charts would benefit from the multi-month spending review. This would provide some interesting analysis of long term spending trends. And allow for more exciting Data Visualisation. On the other hand, it's hard to justify spending time on developing a feature that most users will never see"
           />
           <ListExpansionPanel
             classes={classes}
