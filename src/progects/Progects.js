@@ -31,7 +31,7 @@ function HomePage() {
 }
 
 const useStyles = makeStyles(theme => ({
-  paper: {
+  projectParent: {
     display: "flex",
     flexWrap: "wrap",
     justifyContent: "space-evenly",

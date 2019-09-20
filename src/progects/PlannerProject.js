@@ -4,7 +4,7 @@ import { ProjectCarousel, ListExpansionPanel } from "./commonProjectComponents";
 
 function PlannerProject({ classes, isInView }) {
   return (
-    <Paper className={classes.paper}>
+    <div className={classes.projectParent}>
       <Slide
         direction="right"
         in={isInView}
@@ -80,7 +80,7 @@ function PlannerProject({ classes, isInView }) {
           />
         </div>
       </Slide>
-    </Paper>
+    </div>
   );
 }
 
