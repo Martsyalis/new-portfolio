@@ -34,7 +34,7 @@ function NavDrawer({ isDrawerOpen, setDrawerOpen }) {
       <ProfileAvatar />
       <Divider />
       <List>
-        <ListItemLink to="/home" title="Home" className={classes.LinkItems} />
+        {/* <ListItemLink to="/home" title="Home" className={classes.LinkItems} /> */}
         <ListItemLink
           to="/projects"
           title="Projects"
