@@ -1,0 +1,51 @@
+.home-page {
+  perspective: 1000px;
+  display: flex;
+  justify-content: space-between;
+  margin: 60px;
+}
+
+.left-wall {
+  height: 100%;
+  width: 49vw;
+  display: flex;
+  flex-wrap: wrap;
+  transform: rotateY(70deg);
+  transform-origin: left;
+  box-shadow: -4px 4px 2px 0 rgba(0, 0, 0, 0.3);
+  perspective: 1000px;
+}
+
+.right-wall {
+  height: 100%;
+}
+
+.window1 {
+  width: 200px;
+  height: 100%;
+  transition: all 1s;
+  transform-origin: left;
+  box-shadow: -4px 4px 2px 0 rgba(0, 0, 0, 0.3);
+  margin: 10px 0;
+}
+
+.window2 {
+  width: 340px;
+  height: 100%;
+  transition: all 1s;
+  transform: rotateY(-40deg);
+  transform-origin: right;
+  box-shadow: 4px 4px 2px 0 rgba(0, 0, 0, 0.3);
+  margin: 10px 0;
+}
+
+.window1:hover {
+  transition: all 1s;
+  transform: translateX(100px) rotateY(-40deg) scaleX(3);
+  z-index: 1000
+}
+
+.window2:hover {
+  transition: all 1s;
+  transform: rotateY(-5deg);
+}
