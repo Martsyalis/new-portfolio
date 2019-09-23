@@ -8,8 +8,9 @@ import NavMenuIcon from "../navDrawer/NavMenuIcon";
 
 function App() {
   const [isDrawerOpen, setDrawerOpen] = useState(false);
+
   return (
-    <Paper>
+    <Paper className="appPaper" style={{ minHeight: "100vh" }}>
       <CssBaseline />
       <Router>
         <NavMenuIcon setDrawerOpen={setDrawerOpen} />
@@ -21,3 +22,4 @@ function App() {
 }
 
 export default App;
+
