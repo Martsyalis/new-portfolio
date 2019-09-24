@@ -1,0 +1,65 @@
+.home-page {
+  perspective: 1000px;
+  margin: 30px 50px;
+  display: flex;
+  justify-content: space-evenly;
+  overflow: hidden;
+  padding-bottom: 100px;
+}
+
+.wall {
+  display: flex;
+  flex-wrap: wrap;
+  perspective: 1000px;
+  padding: 20px;
+}
+
+.left-wall {
+  width: 600px;
+  transform-origin: left;
+  transform: rotateY(70deg);
+  box-shadow: -4px 4px 5px 4px rgba(0, 0, 0, 0.3);
+}
+
+.right-wall {
+  width: 600px;
+  transform-origin: right;
+  transform: rotateY(-70deg);
+  box-shadow: 4px 4px 5px 4px rgba(0, 0, 0, 0.3);
+  flex-direction: row-reverse;
+}
+
+.left-window {
+  width: 250px;
+  height: 300px;
+  transition: all 1s;
+  transform-origin: left;
+  box-shadow: -4px 4px 2px 0 rgba(0, 0, 0, 0.3);
+  margin: 10px;
+}
+
+.right-window {
+  width: 450px;
+  height: 300px;
+  transition: all 1s;
+  transform-origin: right;
+  box-shadow: 4px 4px 2px 0 rgba(0, 0, 0, 0.3);
+  margin: 10px;
+}
+
+/* .left-wall:hover {
+  transition: all 1s;
+
+  transform: rotateY(0deg);
+} */
+
+.left-window:hover {
+  transition: all 1s;
+  transform: translateX(400px) rotateY(-35deg) skewY(0deg) scaleX(3) scaleY(2);
+  z-index: 1000;
+}
+
+.right-window:hover {
+  transition: all 1s;
+  transform: translateX(-400px) rotateY(35deg) scaleX(2) scaleY(2);
+}
