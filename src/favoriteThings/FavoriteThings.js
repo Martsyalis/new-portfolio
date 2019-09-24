@@ -1,6 +1,6 @@
 import React from "react";
 import "./favoriteThings.css";
-import { Card, CardActions, CardContent, Typography } from "@material-ui/core";
+import { Card, CardContent, Typography } from "@material-ui/core";
 function FavoriteThings() {
   return (
     <div className="home-page">

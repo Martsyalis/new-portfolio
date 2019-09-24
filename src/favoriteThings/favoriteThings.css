@@ -7,13 +7,14 @@
 
 .left-wall {
   height: 100%;
-  width: 49vw;
+  width: 600px;
   display: flex;
   flex-wrap: wrap;
-  transform: rotateY(70deg);
+  transform: rotateY(80deg);
   transform-origin: left;
-  box-shadow: -4px 4px 2px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: -4px 4px 5px 2px rgba(0, 0, 0, 0.3);
   perspective: 1000px;
+  padding: 20px;
 }
 
 .right-wall {
@@ -21,28 +22,33 @@
 }
 
 .window1 {
-  width: 200px;
+  width: 250px;
   height: 100%;
   transition: all 1s;
   transform-origin: left;
   box-shadow: -4px 4px 2px 0 rgba(0, 0, 0, 0.3);
-  margin: 10px 0;
+  margin: 10px;
 }
 
 .window2 {
   width: 340px;
   height: 100%;
-  transition: all 1s;
+  transition: all 0.5s;
   transform: rotateY(-40deg);
   transform-origin: right;
   box-shadow: 4px 4px 2px 0 rgba(0, 0, 0, 0.3);
   margin: 10px 0;
 }
 
+.left-wall:hover {
+  /* transition: all 1s;
+
+  transform: rotateY(0deg) scale(2); */
+}
 .window1:hover {
   transition: all 1s;
-  transform: translateX(100px) rotateY(-40deg) scaleX(3);
-  z-index: 1000
+  transform: translateX(400px) rotateY(-38deg) skewY(-3deg) scaleX(3) scaleY(2);
+  z-index: 1000;
 }
 
 .window2:hover {
