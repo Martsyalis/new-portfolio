@@ -55,11 +55,13 @@
 
 .left-window:hover {
   transition: all 1s;
-  transform: translateX(400px) rotateY(-35deg) skewY(0deg) scaleX(3) scaleY(2);
+  transform: translateX(400px) rotateY(-38deg) skewY(-1.6deg) scaleX(3) scaleY(2);
   z-index: 1000;
 }
 
 .right-window:hover {
   transition: all 1s;
-  transform: translateX(-400px) rotateY(35deg) scaleX(2) scaleY(2);
+  transform: translateX(-400px) rotateY(36deg) skewY(2deg) scaleX(3) scaleY(2);
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.3);
+
 }

@@ -46,7 +46,6 @@ function FavoriteThings() {
 
 function QuoteCard({ title, text, attribution }) {
   const classes = useStyles();
-
   return (
     <Card className={classes.Card}>
       <CardContent>
